@@ -1,0 +1,53 @@
+/* Chromium selection bug */
+::selection {
+  background: #0070e0
+  color: #ffffff;
+}
+
+
+
+/* bind the toolbar as the window's draggable region */
+#main-header,
+.hp-sidebar,
+.hp-list-page-controls-inner {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+/* Backing out other items we want to be "clickable" */
+#main-header span,
+.dmc-button,
+.hpx-button,
+.dmc-button-link,
+.dmc-button-content,
+.dmc-button-content span,
+.dmc-combobox,
+.icon-wrapper,
+.icon-overlay,
+.icon,
+.hp-search-input,
+.hp-dropdown-button-wrapper,
+.hp-dropdown,
+.hp-pad-more-menu,
+.hp-sharing,
+.hp-header-back-button-wrapper,
+.header-pad-title-and-folder,
+.main-header-right {
+  -webkit-app-region: no-drag;
+}
+
+.hp-sidebar-top {
+  display: none !important;
+}
+
+.hp-sidebar {
+  padding-top: 35px;
+}
+
+#main-header .hp-header-back-button-wrapper {
+  left: 60px !important;
+}
+
+.header-pad-title-and-folder {
+  left: 100px !important;
+}
